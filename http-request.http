@@ -1,0 +1,11 @@
+
+POST http://localhost:1234/v1/employee
+Content-Type: application/json
+
+{
+  "first_name":"rachida",
+  "last_name":"aitbouaziz",
+  "email": "halapa"
+}
+
+###
