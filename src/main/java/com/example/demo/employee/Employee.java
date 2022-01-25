@@ -1,10 +1,13 @@
 package com.example.demo.employee;
 
+import org.apache.tomcat.jni.Local;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 @Entity
 @Table
-public class Employee {
+public class Employee implements Serializable {
     @Id
     @SequenceGenerator(
             name = "employee_sequence",
@@ -26,6 +29,13 @@ public class Employee {
 
     private int salary;
     private LocalDate hiring_date;
+    private String imageurl;
+
+
+    public LocalDate conge_debut;
+    public LocalDate conge_fin;
+
+    public String annonce;
 
     public Employee() {
     }
@@ -39,7 +49,11 @@ public class Employee {
                     String department,
                     String job_title,
                     int salary,
-                    LocalDate hiring_date) {
+                    LocalDate hiring_date,
+                    String imageurl,
+                    LocalDate conge_debut,
+                    LocalDate conge_fin,
+                    String annonce) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -50,6 +64,10 @@ public class Employee {
         this.job_title = job_title;
         this.salary = salary;
         this.hiring_date = hiring_date;
+        this.imageurl=imageurl;
+        this.conge_debut=conge_debut;
+        this.conge_fin=conge_fin;
+        this.annonce=annonce;
     }
 
     public Employee(String first_name,
@@ -60,7 +78,11 @@ public class Employee {
                     String department,
                     String job_title,
                     int salary,
-                    LocalDate hiring_date) {
+                    LocalDate hiring_date,
+                    String imageurl,
+                    LocalDate conge_fin,
+                    LocalDate conge_debut,
+                    String annonce) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
@@ -70,6 +92,10 @@ public class Employee {
         this.job_title = job_title;
         this.salary = salary;
         this.hiring_date = hiring_date;
+        this.imageurl=imageurl;
+        this.conge_fin=conge_fin;
+        this.conge_debut=conge_debut;
+        this.annonce=annonce;
     }
 
     public long getId() {
@@ -151,6 +177,36 @@ public class Employee {
     public void setHiring_date(LocalDate hiring_date) {
         this.hiring_date = hiring_date;
     }
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+    public LocalDate getConge_debut() {
+        return conge_debut;
+    }
+
+    public void setConge_debut(LocalDate conge_debut) {
+        this.conge_debut = conge_debut;
+    }
+
+    public LocalDate getConge_fin() {
+        return conge_fin;
+    }
+
+    public void setConge_fin(LocalDate conge_fin) {
+        this.conge_fin = conge_fin;
+    }
+
+    public String getAnnonce() {
+        return annonce;
+    }
+
+    public void setAnnonce(String annonce) {
+        this.annonce = annonce;
+    }
 
     @Override
     public String toString() {
@@ -165,6 +221,7 @@ public class Employee {
                 ", job_title='" + job_title + '\'' +
                 ", salary=" + salary +
                 ", hiring_date=" + hiring_date +
+                ", imageurl=" + imageurl+
                 '}';
     }
 }

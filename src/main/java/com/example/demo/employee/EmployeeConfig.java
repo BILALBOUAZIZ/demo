@@ -23,8 +23,12 @@ public class EmployeeConfig {
                     "IT",
                     "..",
                     10000,
-                    LocalDate.of(2023, Month.JANUARY, 5)
-            );
+                    LocalDate.of(2023, Month.JANUARY, 5),
+                   "imageurl",
+                   LocalDate.of(2025, Month.JANUARY, 5),
+                   LocalDate.of(2025, Month.JANUARY, 25),
+                   "annnekrjfkejmh"
+                   );
             repository.saveAll(
                     List.of(bilal)
             );

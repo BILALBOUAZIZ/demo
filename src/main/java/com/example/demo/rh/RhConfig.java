@@ -12,7 +12,8 @@ import java.util.List;
 
 @Configuration
 public class RhConfig {
-    @Bean
+  //  @Bean
+    /*
     CommandLineRunner commandLineRunnerRh(RhRepository repository){
         return  args -> {
             RhRes amine = new RhRes(
@@ -24,12 +25,15 @@ public class RhConfig {
                     "RH",
                     "RH",
                     15000,
-                    LocalDate.of(2020, Month.JANUARY, 5)
+                    LocalDate.of(2020, Month.JANUARY, 5),
+                    "htppsdkjfn"
             );
             repository.saveAll(List.of(amine));
 
         };
-    }
+       }
+     */
+
 
 
 }

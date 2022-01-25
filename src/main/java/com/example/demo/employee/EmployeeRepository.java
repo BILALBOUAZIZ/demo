@@ -12,4 +12,8 @@ public interface EmployeeRepository
 // selelect employee where email= ...
     @Query("SELECT e FROM Employee e WHERE e.email=?1")
     Optional<Employee> findEmployeeByEmail(String email);
+
+    void deleteEmployeeById(Long id);
+
+   Optional <Employee> findEmployeeById(Long id);
 }
