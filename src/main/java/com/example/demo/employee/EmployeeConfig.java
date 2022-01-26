@@ -10,7 +10,7 @@ import java.util.List;
 
 @Configuration
 public class EmployeeConfig {
-
+/*
     @Bean
     CommandLineRunner commandLineRunnerEmployee(EmployeeRepository repository){
         return  args -> {
@@ -35,5 +35,7 @@ public class EmployeeConfig {
 
         };
     }
+
+ */
 
 }

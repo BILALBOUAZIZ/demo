@@ -12,4 +12,5 @@ public interface RhRepository
    Optional<RhRes> findRhResById(Long id);
 
    void deleteRhResById(Long id);
+
 }

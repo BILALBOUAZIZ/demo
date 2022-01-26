@@ -31,12 +31,6 @@ public class Employee implements Serializable {
     private LocalDate hiring_date;
     private String imageurl;
 
-
-    public LocalDate conge_debut;
-    public LocalDate conge_fin;
-
-    public String annonce;
-
     public Employee() {
     }
 
@@ -50,10 +44,8 @@ public class Employee implements Serializable {
                     String job_title,
                     int salary,
                     LocalDate hiring_date,
-                    String imageurl,
-                    LocalDate conge_debut,
-                    LocalDate conge_fin,
-                    String annonce) {
+                    String imageurl
+                    ) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -65,9 +57,7 @@ public class Employee implements Serializable {
         this.salary = salary;
         this.hiring_date = hiring_date;
         this.imageurl=imageurl;
-        this.conge_debut=conge_debut;
-        this.conge_fin=conge_fin;
-        this.annonce=annonce;
+
     }
 
     public Employee(String first_name,
@@ -79,10 +69,8 @@ public class Employee implements Serializable {
                     String job_title,
                     int salary,
                     LocalDate hiring_date,
-                    String imageurl,
-                    LocalDate conge_fin,
-                    LocalDate conge_debut,
-                    String annonce) {
+                    String imageurl
+                    ) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
@@ -93,9 +81,7 @@ public class Employee implements Serializable {
         this.salary = salary;
         this.hiring_date = hiring_date;
         this.imageurl=imageurl;
-        this.conge_fin=conge_fin;
-        this.conge_debut=conge_debut;
-        this.annonce=annonce;
+
     }
 
     public long getId() {
@@ -183,29 +169,6 @@ public class Employee implements Serializable {
 
     public void setImageurl(String imageurl) {
         this.imageurl = imageurl;
-    }
-    public LocalDate getConge_debut() {
-        return conge_debut;
-    }
-
-    public void setConge_debut(LocalDate conge_debut) {
-        this.conge_debut = conge_debut;
-    }
-
-    public LocalDate getConge_fin() {
-        return conge_fin;
-    }
-
-    public void setConge_fin(LocalDate conge_fin) {
-        this.conge_fin = conge_fin;
-    }
-
-    public String getAnnonce() {
-        return annonce;
-    }
-
-    public void setAnnonce(String annonce) {
-        this.annonce = annonce;
     }
 
     @Override
