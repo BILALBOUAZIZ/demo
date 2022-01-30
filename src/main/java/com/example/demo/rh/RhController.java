@@ -6,6 +6,7 @@ import com.example.demo.conge.CongeState;
 import com.example.demo.employee.Employee;
 import com.example.demo.employee.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,9 +46,11 @@ public class RhController {
         return new ResponseEntity<>(updateRhRes, HttpStatus.OK) ;
     }
     @DeleteMapping("/rhres/delete/{id}")
+    @Query("DELETE  FROM RhRes k WHERE k.id=?1")
     public  ResponseEntity<?> deleteRhRes(@PathVariable("id") Long id){
+
         rhService.deleteRhRes(id);
-        return new ResponseEntity<>(HttpStatus.CREATED) ;
+        return new ResponseEntity<>(HttpStatus.OK) ;
 
     }
 

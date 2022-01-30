@@ -30,15 +30,6 @@ public class EmployeeService {
     public List<Employee> getEmployee() {
         return employeeRepository.findAll();
     }
-
-    /*public void addNewEmployee(@NotNull Employee employee) {
-        Optional<Employee> employeeOptional = employeeRepository
-                .findEmployeeByEmail(employee.getEmail());
-        if(employeeOptional.isPresent()){
-            throw new IllegalStateException("email taken");
-        }
-      employeeRepository.save(employee);
-    } */
     public Employee addEmployee(Employee employee){
         //employee.setId(Long.parseLong(UUID.randomUUID().toString()));
         return employeeRepository.save(employee);
@@ -83,4 +74,12 @@ public class EmployeeService {
     public List<Annonce> findAnnonceById(Long id) {
         return annonceRepository.findAnnonceById(id);
     }
+    /*public void addNewEmployee(@NotNull Employee employee) {
+        Optional<Employee> employeeOptional = employeeRepository
+                .findEmployeeByEmail(employee.getEmail());
+        if(employeeOptional.isPresent()){
+            throw new IllegalStateException("email taken");
+        }
+      employeeRepository.save(employee);
+    } */
 }

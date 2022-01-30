@@ -17,16 +17,16 @@ public class Annonce {
     )
 
     public Long id;
-    public String annonce;
+    public String aannonce;
 
     public Annonce(Long id, String annonce) {
         this.id = id;
-        this.annonce = annonce;
+        this.aannonce = annonce;
     }
     @Override
     public String toString() {
         return "Annonce{" +
-                "annonce='" + annonce + '\'' +
+                "annonce='" + aannonce + '\'' +
                 '}';
     }
     public Long getId() {
@@ -38,17 +38,17 @@ public class Annonce {
     }
 
     public String getAnnonce() {
-        return annonce;
+        return aannonce;
     }
 
     public void setAnnonce(String annonce) {
-        this.annonce = annonce;
+        this.aannonce = annonce;
     }
 
     public Annonce() {
     }
 
     public Annonce(String annonce) {
-        this.annonce = annonce;
+        this.aannonce = annonce;
     }
 }

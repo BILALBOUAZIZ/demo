@@ -33,26 +33,6 @@ public class EmployeeController {
         return new ResponseEntity<>(employee, HttpStatus.OK) ;
 
     }
-    /*
-    @PostMapping("/add")
-    public  ResponseEntity<Employee> AddEmployee(@RequestBody Employee employee){
-       Employee newEmployee =  employeeService.addEmployee(employee);
-        return new ResponseEntity<>(newEmployee, HttpStatus.CREATED) ;
-    }
-
-    @PutMapping("/update")
-    public  ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee){
-        Employee updateEmployee =  employeeService.updateEmployee(employee);
-        return new ResponseEntity<>(updateEmployee, HttpStatus.OK) ;
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public  ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
-        employeeService.deleteEmployee(id);
-        return new ResponseEntity<>(HttpStatus.CREATED) ;
-    }
-    */
-
     //conge_request
     @GetMapping("/conge/demande")
     public ResponseEntity<List<CongeDemande>> getConge(){
@@ -93,5 +73,25 @@ public class EmployeeController {
         List<Annonce> annonces = employeeService.findAnnonceById(id);
         return new ResponseEntity<>(annonces, HttpStatus.OK);
     }
+
+     /*
+    @PostMapping("/add")
+    public  ResponseEntity<Employee> AddEmployee(@RequestBody Employee employee){
+       Employee newEmployee =  employeeService.addEmployee(employee);
+        return new ResponseEntity<>(newEmployee, HttpStatus.CREATED) ;
+    }
+
+    @PutMapping("/update")
+    public  ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee){
+        Employee updateEmployee =  employeeService.updateEmployee(employee);
+        return new ResponseEntity<>(updateEmployee, HttpStatus.OK) ;
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public  ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
+        employeeService.deleteEmployee(id);
+        return new ResponseEntity<>(HttpStatus.CREATED) ;
+    }
+    */
 
 }
